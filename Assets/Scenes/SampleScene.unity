@@ -1829,9 +1829,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IAE1
   player: {fileID: 0}
   playerTransform: {fileID: 0}
-  playeMeshRenderer: {fileID: 0}
-  viewDistance: 5
-  viewAngle: 45
+  playerMeshRenderer: {fileID: 0}
+  viewDistance: 20
+  viewAngle: 90
+  patrolPoints:
+  - {fileID: 1245088227}
+  - {fileID: 143294332}
+  - {fileID: 585274671}
+  - {fileID: 1477999899}
+  distanceCheck: 1
 --- !u!195 &1314997820
 NavMeshAgent:
   m_ObjectHideFlags: 0

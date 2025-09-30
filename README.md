@@ -1,8 +1,19 @@
-using UnityEngine;
-using UnityEngine.AI;
+# README
 
-public class IAE1 : MonoBehaviour
-{
+El código del examen se encuentra dentro de la carpeta de scripts y tiene le nombre "*IAE1*" y la escena donde se encuentra el NPC es en SampleScene
+
+## Explicación
+
+en este caso se me hizo más sencillo Hacer un script desde cero e implementarle algunos elementos de lo que hicimos en clase, principalmente el FOW
+
+## Comportamiento
+El comportamiento que yo agregué fue que la IA tomara diferentes acciones dependiendo del color del material del jugador. En este caso
+- Blanceo: Ignora al jugador, continúa patruyando
+- Negro: persigue al jugador
+- Amarillo: vigila al jugador, se le queda viendo.
+
+### Explicación del códgio
+``` C#
     [Header("Info jugador")]
     private GameObject player;
     private Transform playerTransform;
@@ -41,8 +52,15 @@ public class IAE1 : MonoBehaviour
         Plan();
         Act();
     }
-    
-    void Sense()
+```
+
+Empezamos por la declaración de variables que vamos a utilizar y la asignación de estas, principalmente de los elementos que pertenecen al player cómo lo son su ubicación y su meshRenderer para poder ver el color del jugador.
+Finalmente en Update llamamos a las funciones de Sense, Plan y Act.
+
+#### Sense
+Tomamos la distancia la jugador, esto nos servirá para el FOV. Además hacemos un cambio del indice de patrullaje para que vaya a sus distintos puntos de patrullaje.
+```C#
+void Sense()
     {
         distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
         
@@ -51,7 +69,10 @@ public class IAE1 : MonoBehaviour
             patrolIndex = (patrolIndex + 1) % patrolPoints.Length;
         }
     }
-    
+```
+#### Plan
+Aqui es donde se determina cual va a el State osea el comportamiento qeu tiene en base a lo que percibe. Si no puede ni ver al jugador va a patrullar, lo demás cambia en base al color de jugador.
+```C#
     void Plan()
     {
 
@@ -68,7 +89,10 @@ public class IAE1 : MonoBehaviour
         else if (playerMeshRenderer.material.color == Color.yellow)
             currentState = State.Watch;
     }
-    
+``` 
+#### Act
+En base al estado que tenga hará algo diferente. Cada comportamiento tiene su propio método.
+```C#
     void Act()
     {
         switch (currentState)
@@ -100,7 +124,14 @@ public class IAE1 : MonoBehaviour
         agent.SetDestination(transform.position);
         transform.LookAt(playerTransform);
     }
-    
+```
+
+### Funciones extra
+PlayerInFOV nos ayuda a determinar si el NPC es capaz de ver al jugador dentro de su campo de visión sin ningún obstaculo.
+
+Y OnDrawGizmosSelected es una función de unity que nos ayuda a visualizar en el NPC parámetros cómo su campo de visión, el ángulo de su visión y la linea que existe actualmente entre el NPC y el jugador, es únicamente para visualizar con más claridad en el inspector.
+
+```C#
     private bool PlayerInFOV()
     {
         Vector3 dirToPlayer = (playerTransform.position - transform.position).normalized;
@@ -123,8 +154,7 @@ public class IAE1 : MonoBehaviour
         return false;
     }
 
-    // Esto se lo pedí al GPTo para poder visualizar las cosas xd
-    void OnDrawGizmosSelected()
+     void OnDrawGizmosSelected()
     {
         // Radio de visión
         Gizmos.color = Color.green;
@@ -145,4 +175,4 @@ public class IAE1 : MonoBehaviour
             Gizmos.DrawLine(transform.position, playerTransform.position);
         }
     }
-}
+```
