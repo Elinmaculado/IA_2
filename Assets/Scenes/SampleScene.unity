@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 959248462}
   - component: {fileID: 959248461}
   - component: {fileID: 959248465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1827,9 +1827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8521246c8f7b3944aa60de95b54f847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IAE1
-  player: {fileID: 0}
-  playerTransform: {fileID: 0}
-  playerMeshRenderer: {fileID: 0}
   viewDistance: 20
   viewAngle: 90
   patrolPoints:
