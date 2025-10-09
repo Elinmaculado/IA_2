@@ -5,6 +5,7 @@ public class StateMachine : MonoBehaviour
 {
     public State initialState;
     public State currentState;
+    public FSMContext context = new FSMContext();
 
     private void Start()
     {
@@ -32,4 +33,12 @@ public class StateMachine : MonoBehaviour
             currentState.CheckTransitions(this);
         }
     }
+    
 }
+
+    [SerializeField] 
+    public class FSMContext
+    {
+        public GameObject playah;
+        public LayerMask layer;
+    }
