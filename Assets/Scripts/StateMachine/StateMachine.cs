@@ -36,9 +36,11 @@ public class StateMachine : MonoBehaviour
     
 }
 
-    [SerializeField] 
-    public class FSMContext
-    {
-        public GameObject playah;
-        public LayerMask layer;
-    }
+// Opcional por si se quieren pasar info entre state machines
+[Serializable]
+public class FSMContext
+{
+    public int battery = 3;
+    public GameObject playah;
+    public LayerMask layer;
+}
