@@ -39,7 +39,7 @@ public class StateMachine : MonoBehaviour
     
 }
 
-// Opcional por si se quieren pasar info entre state machines
+// Opcional por si se quieren pasar info entre states
 [Serializable]
 public class FSMContext
 {

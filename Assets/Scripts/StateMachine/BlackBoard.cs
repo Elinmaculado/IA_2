@@ -7,7 +7,7 @@ public class BlackBoard
 
     public void Set<T>(string key, T value)
     {
-        data.Add(key, value);
+        data.TryAdd(key, value);
     }
 
     public T Get<T>(string key)
