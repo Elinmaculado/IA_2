@@ -6,9 +6,12 @@ public class StateMachine : MonoBehaviour
     public State initialState;
     public State currentState;
     public FSMContext context = new FSMContext();
+    
+    public BlackBoard blackBoard = new BlackBoard();
 
     private void Start()
     {
+        blackBoard.Set("Player", GameObject.FindGameObjectWithTag("Player"));
         changeState(initialState);
     }
 
