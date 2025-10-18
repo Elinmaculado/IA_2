@@ -8,6 +8,8 @@ public class StateMachine : MonoBehaviour
     public FSMContext context = new FSMContext();
     
     public BlackBoard blackBoard = new BlackBoard();
+    public StudentBlackBoard studentBlackBoard = new StudentBlackBoard();
+    public TeacherBlackBoard teacherBlackBoard = new TeacherBlackBoard();
 
     private void Start()
     {

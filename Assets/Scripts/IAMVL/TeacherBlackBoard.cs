@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TeacherBlackBoard
 {
-    public Transform[] patrolPoints;
+    public bool isPatrolling;
+    public bool isPlayig;
+    public Transform student;
 
 }
