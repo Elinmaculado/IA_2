@@ -8,6 +8,7 @@ TagManager:
   - Charger
   - Shop
   - House
+  - Screen
   layers:
   - Default
   - TransparentFX

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e592f2cee98954cb6dc910045e2087, type: 3}
   m_Name: PlayingState
   m_EditorClassIdentifier: Assembly-CSharp::PlayingState
-  transitions: []
+  transitions:
+  - Condition: {fileID: 11400000, guid: f5484b27317f61b4a99adb8e15e3353e, type: 2}
+    state: {fileID: 11400000, guid: 90d2c193ba12af34b84b0ff2d265984e, type: 2}
