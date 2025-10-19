@@ -20,12 +20,10 @@ public class VigilantState : State
 
     public override void UpdateState(StateMachine sm)
     {
-        // Rotación continua de 360
         float rotationStep = rotationSpeed * Time.deltaTime;
         sm.transform.Rotate(Vector3.up, rotationStep);
         rotatedAngle += Mathf.Abs(rotationStep);
-
-        // Cuando completa una vuelta entera
+        
         if (rotatedAngle >= 360f)
         {
             Debug.Log("Vuelta completa");

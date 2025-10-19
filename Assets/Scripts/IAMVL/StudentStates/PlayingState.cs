@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Video;
 
 [CreateAssetMenu(fileName = "PlayingState", menuName = "FSM/Limbus/Student/Playing")]
 public class PlayingState : State
@@ -10,6 +10,8 @@ public class PlayingState : State
         sm.studentBlackBoard.isPlaying = true;
         sm.studentBlackBoard.videoPlayer.clip = sm.studentBlackBoard.limbus;
         sm.studentBlackBoard.videoPlayer.Play();
+        sm.StartCoroutine(checkForTeacher(sm, 1));
+
     }
     public override void UpdateState(StateMachine sm)
     {
@@ -19,5 +21,11 @@ public class PlayingState : State
     public override void ExitState(StateMachine sm)
     {
         sm.studentBlackBoard.isPlaying = false;
+    }
+    
+    private IEnumerator checkForTeacher(StateMachine sm, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        sm.studentBlackBoard.isVigilant = true;
     }
 }
