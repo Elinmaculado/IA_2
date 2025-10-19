@@ -9,7 +9,7 @@ public class StateMachine : MonoBehaviour
     
     public BlackBoard blackBoard = new BlackBoard();
     public StudentBlackBoard studentBlackBoard;
-    public TeacherBlackBoard teacherBlackBoard = new TeacherBlackBoard();
+    public TeacherBlackBoard teacherBlackBoard;
 
     private void Start()
     {

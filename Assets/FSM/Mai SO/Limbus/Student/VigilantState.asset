@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347d9b9feaec11d479529466e7191fc2, type: 3}
-  m_Name: SWorkingState
-  m_EditorClassIdentifier: Assembly-CSharp::Workingstate
+  m_Script: {fileID: 11500000, guid: 1bb2341a3a0021c4db03bf91c6add268, type: 3}
+  m_Name: VigilantState
+  m_EditorClassIdentifier: Assembly-CSharp::VigilantState
   transitions:
   - Condition: {fileID: 11400000, guid: 31a46089791575341931170a68ccc29b, type: 2}
     state: {fileID: 11400000, guid: f10533a106a72c946adaaefcbba691d9, type: 2}
   - Condition: {fileID: 11400000, guid: f5484b27317f61b4a99adb8e15e3353e, type: 2}
-    state: {fileID: 11400000}
+    state: {fileID: 11400000, guid: 90d2c193ba12af34b84b0ff2d265984e, type: 2}
+  rotationSpeed: 90
+  viewDistance: 8
+  viewAngle: 90

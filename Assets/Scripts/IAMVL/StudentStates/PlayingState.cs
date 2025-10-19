@@ -6,11 +6,17 @@ public class PlayingState : State
 {
     public override void EnterState(StateMachine sm)
     {
+        sm.studentBlackBoard.ClearBools();
         sm.studentBlackBoard.isPlaying = true;
         sm.studentBlackBoard.videoPlayer.clip = sm.studentBlackBoard.limbus;
         sm.studentBlackBoard.videoPlayer.Play();
     }
     public override void UpdateState(StateMachine sm)
+    {
+        
+    }
+
+    public override void ExitState(StateMachine sm)
     {
         sm.studentBlackBoard.isPlaying = false;
     }
