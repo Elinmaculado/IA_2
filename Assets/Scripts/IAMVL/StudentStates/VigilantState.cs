@@ -16,6 +16,9 @@ public class VigilantState : State
         sm.studentBlackBoard.ClearBools();
         sm.studentBlackBoard.isVigilant = true;
         rotatedAngle = 0f;
+        sm.studentBlackBoard.videoPlayer.clip = sm.studentBlackBoard.working;
+        sm.studentBlackBoard.videoPlayer.Play();
+        sm.studentBlackBoard.audioSource.Play();
     }
 
     public override void UpdateState(StateMachine sm)

@@ -12,6 +12,7 @@ public class StudentBlackBoard : MonoBehaviour
     public VideoPlayer videoPlayer;
     public VideoClip limbus;
     public VideoClip working;
+    public AudioSource audioSource;
 
     public void ClearBools()
     {
