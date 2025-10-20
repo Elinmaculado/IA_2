@@ -9,6 +9,7 @@ public class JudgingStudentState : State
     {
         sm.teacherBlackBoard.catchedStudent = true;
         sm.transform.position = sm.teacherBlackBoard.student.transform.position;
+        sm.teacherBlackBoard.audioSource.Play();
     }
 
     public override void UpdateState(StateMachine sm)
@@ -16,13 +17,13 @@ public class JudgingStudentState : State
         if (StudentInFOV(sm))
         {
             //Debug.Log("El maestro detectó al alumno trabajando.");
-            // Cambio de estado
+            sm.teacherBlackBoard.isPlayig = true;
         }
     }
 
     public override void ExitState(StateMachine sm)
     {
-        sm.teacherBlackBoard.catchedStudent = true;
+        sm.teacherBlackBoard.catchedStudent = false;
     }
     
     private bool StudentInFOV(StateMachine sm)

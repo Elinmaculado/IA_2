@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76baf2d12bc14f40932ba8c51268fb8, type: 3}
   m_Name: TeacherJudging
   m_EditorClassIdentifier: Assembly-CSharp::JudgingStudentState
-  transitions: []
+  transitions:
+  - Condition: {fileID: 11400000, guid: 9f32631d1d665ce40b62c2677b22fb98, type: 2}
+    state: {fileID: 11400000, guid: e899ec733a0f46d44a6aefacc58b72d3, type: 2}
   viewDistance: 10
   viewAngle: 90

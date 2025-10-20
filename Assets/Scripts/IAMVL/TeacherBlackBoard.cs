@@ -8,8 +8,10 @@ public class TeacherBlackBoard : MonoBehaviour
     public bool isPlayig;
     public bool catchedStudent;
     public Transform student;
-    public NavMeshAgent agent;
+    public Transform screenPlay;
+    public Transform[] patrolPoints;
 
     public VideoPlayer videoPlayer;
+    public AudioSource audioSource;
 	
 }

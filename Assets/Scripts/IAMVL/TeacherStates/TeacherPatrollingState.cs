@@ -5,14 +5,21 @@ public class TeacherPatrollingState : State
     [Header("Field of View")]
     public float viewDistance = 10f;
     public float viewAngle = 90f;
+    
+    public float moveSpeed = 3f;
+    public float reachThreshold = 0.5f;
+    private int currentPatrolIndex;
 
     public override void EnterState(StateMachine sm)
     {
         sm.teacherBlackBoard.isPatrolling = true;
+        currentPatrolIndex = 0;
     }
 
     public override void UpdateState(StateMachine sm)
     {
+        Patrol(sm);
+        
         if (StudentInFOV(sm))
         {
             Debug.Log("El maestro detectó al alumno jugando.");
@@ -25,6 +32,26 @@ public class TeacherPatrollingState : State
     public override void ExitState(StateMachine sm)
     {
         sm.teacherBlackBoard.isPatrolling = false;
+    }
+
+    public void Patrol(StateMachine sm)
+    {
+        var points = sm.teacherBlackBoard.patrolPoints;
+        if (points == null || points.Length == 0) return;
+
+        Transform target = points[currentPatrolIndex];
+        Vector3 dir = (target.position - sm.transform.position).normalized;
+
+        sm.transform.position += dir * moveSpeed * Time.deltaTime;
+        sm.transform.LookAt(target.position);
+
+        float distance = Vector3.Distance(sm.transform.position, target.position);
+        if (distance <= reachThreshold)
+        {
+            currentPatrolIndex++;
+            if (currentPatrolIndex >= points.Length)
+                currentPatrolIndex = 0;
+        }
     }
 
     private bool StudentInFOV(StateMachine sm)
