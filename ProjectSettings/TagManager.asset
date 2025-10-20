@@ -10,6 +10,7 @@ TagManager:
   - House
   - Screen
   - Teacher
+  - Student
   layers:
   - Default
   - TransparentFX

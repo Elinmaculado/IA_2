@@ -17,6 +17,6 @@ MonoBehaviour:
     state: {fileID: 11400000, guid: f10533a106a72c946adaaefcbba691d9, type: 2}
   - Condition: {fileID: 11400000, guid: f5484b27317f61b4a99adb8e15e3353e, type: 2}
     state: {fileID: 11400000, guid: 90d2c193ba12af34b84b0ff2d265984e, type: 2}
-  rotationSpeed: 90
+  rotationSpeed: 45
   viewDistance: 8
-  viewAngle: 90
+  viewAngle: 25

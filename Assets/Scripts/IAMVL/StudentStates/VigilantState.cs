@@ -28,12 +28,10 @@ public class VigilantState : State
         {
             Debug.Log("Vuelta completa");
             rotatedAngle = 0f;
-
-            // Cambio a playingState
+            
             sm.studentBlackBoard.isPlaying = true;
         }
-
-        // Chequeo de FOV para detectar al Teacher
+        
         if (TeacherInFOV(sm))
         {
             sm.studentBlackBoard.isCaught = true;

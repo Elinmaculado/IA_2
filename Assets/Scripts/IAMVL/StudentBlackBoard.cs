@@ -9,7 +9,6 @@ public class StudentBlackBoard : MonoBehaviour
     public bool isCaught;
 
     [Header("Components")] 
-    //public GameObject player;
     public VideoPlayer videoPlayer;
     public VideoClip limbus;
     public VideoClip working;

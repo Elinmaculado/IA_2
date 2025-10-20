@@ -15,7 +15,7 @@ public class DrawGizmos : MonoBehaviour
             return;
 
         // solo dibujar si el estado actual tiene FOV
-        if (sm.currentState is VigilantState fov)
+        if (sm.currentState is TeacherPatrollingState fov)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, fov.viewDistance);
