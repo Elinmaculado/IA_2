@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,7 +8,38 @@ namespace BehaviourTree
     public interface IStrategies
     {
         Node.Status Process();
-        void Reset();
+
+        void Reset()
+        {
+            // Ño
+        }
+    }
+
+    public class Condition : IStrategies
+    {
+        private readonly Func<bool> predicate;
+
+        public Condition(Func<bool> predicate)
+        {
+            this.predicate = predicate;
+        }
+        public Node.Status Process() => predicate() ? Node.Status.Succes : Node.Status.Failure;
+    }
+
+    public class ActionStrategy : IStrategies
+    {
+        private readonly Action doSometing;
+
+        public ActionStrategy(Action doSometing)
+        {
+            this.doSometing = doSometing;
+        }
+
+        public Node.Status Process()
+        {
+            doSometing();
+            return Node.Status.Succes;
+        }
     }
 
     public class PatrolStrategy : IStrategies
