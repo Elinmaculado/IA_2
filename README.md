@@ -9,7 +9,7 @@ Sigue al jugador a menos que se aleje mucho. Si se aleja de rango, espera un mom
 
 # Diagrama FSM
 
-![[Pasted image 20251101092250.png]]
+![](Pasted%image%20251101092250.png)
 ## Dificultades o problemas de desarrollo
 Para mi es más difícil visualizar el behavior tree que la state machine. Pero lo que si me gusta del behavior tree es que siento que es más contenido
 
