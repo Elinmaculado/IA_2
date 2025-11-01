@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c751c24251eedf446b1d625ca1fa36db, type: 3}
+  m_Name: New Wait State
+  m_EditorClassIdentifier: Assembly-CSharp::WaitState
+  transitions:
+  - Condition: {fileID: 11400000, guid: 266450dab700a8a4ab75d7e8c3f12d65, type: 2}
+    state: {fileID: 11400000, guid: f9863188bde47db45a0d0691f28dd34b, type: 2}
+  waitTime: 3

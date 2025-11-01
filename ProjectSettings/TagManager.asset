@@ -11,6 +11,7 @@ TagManager:
   - Screen
   - Teacher
   - Student
+  - Home
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Floor
   - Wall
-  - 
+  - Home
   - 
   - 
   - 
