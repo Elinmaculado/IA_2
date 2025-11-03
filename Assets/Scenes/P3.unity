@@ -619,12 +619,12 @@ GameObject:
   - component: {fileID: 882672078}
   - component: {fileID: 882672077}
   m_Layer: 0
-  m_Name: Mascot (1)
+  m_Name: FSM Pet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &882672077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,12 +885,12 @@ GameObject:
   - component: {fileID: 1607463291}
   - component: {fileID: 1607463296}
   m_Layer: 0
-  m_Name: Mascot
+  m_Name: BT Pet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &1607463291
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BehaviourTree.MascotBT
   player: {fileID: 763464146}
   home: {fileID: 331842953}
-  chaseDistance: 5
+  chaseDistance: 10
   waitTime: 3
   agent: {fileID: 0}
 --- !u!1 &1718984231

@@ -15,4 +15,4 @@ MonoBehaviour:
   transitions:
   - Condition: {fileID: 11400000, guid: 2a88b48c4bc91214e9d6873cfb8d2c6a, type: 2}
     state: {fileID: 11400000, guid: e197fae797b46d248b400f5f2ffbb8fb, type: 2}
-  chaseDistance: 5
+  chaseDistance: 10

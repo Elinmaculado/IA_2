@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5e30d0fa33ce84eb4e619761f578f9, type: 3}
   m_Name: New Is Player Far Condition
   m_EditorClassIdentifier: Assembly-CSharp::IsPlayerFarCondition
-  chaseDistance: 5
+  chaseDistance: 10
