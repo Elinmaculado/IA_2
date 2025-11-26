@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 
-public class Condition : ScriptableObject
+
+public class HomemadeCondition : ScriptableObject
 {
     public virtual bool Check(StateMachine stateMachine)
     {
@@ -12,6 +13,6 @@ public class Condition : ScriptableObject
 [Serializable]
 public class Transition
 {
-    public Condition Condition;
+    public HomemadeCondition homemadeCondition;
     public State state;
 }

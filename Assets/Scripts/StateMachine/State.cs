@@ -23,7 +23,7 @@ public abstract class State : ScriptableObject
     {
         foreach (var t in transitions)
         {
-            if (t.Condition != null && t.Condition.Check(stateMachine))
+            if (t.homemadeCondition != null && t.homemadeCondition.Check(stateMachine))
             {
                 stateMachine.changeState(t.state);
                 break;

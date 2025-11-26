@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CanPlayRimworld", menuName = "FSM/Limbus/Teacher/Conditions/CanPlay")]
-public class TeacherCanPlayCondition : Condition
+public class TeacherCanPlayHomemadeCondition : HomemadeCondition
 {
     public override bool Check(StateMachine sm)
     {

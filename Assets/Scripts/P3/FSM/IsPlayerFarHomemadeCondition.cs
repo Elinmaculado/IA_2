@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "FSM/Pet/Conditions/IsPlayerFar")]
-public class IsPlayerFarCondition : Condition
+public class IsPlayerFarHomemadeCondition : HomemadeCondition
 {
     public float chaseDistance = 5f;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "FSM/Pet/Conditions/IsDoneWaiting")]
-public class IsDoneWaitingCondition : Condition
+public class IsDoneWaitingHomemadeCondition : HomemadeCondition
 {
     public override bool Check(StateMachine stateMachine)
     {

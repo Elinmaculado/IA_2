@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TimerCondition", menuName = "FSM/Conditions/Timer")]
-public class TimerCondition : Condition
+public class TimerHomemadeCondition : HomemadeCondition
 {
     public float waitTime = 3f;
     private float timer;

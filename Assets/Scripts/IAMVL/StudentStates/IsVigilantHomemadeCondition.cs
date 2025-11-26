@@ -1,6 +1,6 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "VigilantCondition", menuName = "FSM/Limbus/Student/Conditions/Surveil")]
-public class IsVigilantCondition : Condition
+public class IsVigilantHomemadeCondition : HomemadeCondition
 {
     public override bool Check(StateMachine sm)
     {

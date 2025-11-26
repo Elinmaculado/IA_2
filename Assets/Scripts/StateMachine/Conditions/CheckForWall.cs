@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ConditionWall", menuName = "FSM/Conditions/ConditionWall")]
-public class CheckForWall : Condition
+public class CheckForWall : HomemadeCondition
 {
     public float checkDistance = 1.5f;
     public LayerMask wallMask;

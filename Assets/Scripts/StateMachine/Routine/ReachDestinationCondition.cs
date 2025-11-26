@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ReachedDestinationCondition", menuName = "FSM/Conditions/ReachedDestination")]
-public class ReachedDestinationCondition : Condition
+public class ReachedDestinationHomemadeCondition : HomemadeCondition
 {
     public float threshold = 0.2f;
     public string targetTag;
